@@ -1,0 +1,42 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 中青自动视频3
+
+on:
+  workflow_dispatch:
+    # 账号越多文章越多，运行一次消耗的时间也越长，文章和视频不要一块运行，cron自己看着写
+  schedule:
+     - cron: '25 1,7,13 * * *'
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+      YOUTH_VIDEO5: ${{ secrets.YOUTH_VIDEO5 }}
+      YOUTH_VIDEO6: ${{ secrets.YOUTH_VIDEO6 }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        run: |
+          npm install
+          
+      - name: '运行 【中青看点自动视频一】'
+        if: env.YOUTH_VIDEO5
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_VIDEO5 }}
+
+      - name: '运行 【中青看点自动视频二】'
+        if: env.YOUTH_VIDEO6
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_VIDEO6 }}
