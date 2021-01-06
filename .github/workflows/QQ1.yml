@@ -6,7 +6,7 @@ name: 企鹅日常
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/50 * * * *'
+     - cron: '*/55 * * * *'
   watch:
     types: started
 jobs:
