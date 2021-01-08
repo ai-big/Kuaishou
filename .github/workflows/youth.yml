@@ -23,19 +23,19 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【中青看点日常任务】'
+      - name: '运行 【中青看点日常任务1】'
         if: env.YOUTH_HEADER
         run: |
           node Task/youth.js
-      - name: '运行 【中青看点日常任务】'
+      - name: '运行 【中青看点日常任务2】'
         if: env.YOUTH_ARTBODY
         run: |
           node Task/youth.js
-      - name: '运行 【中青看点日常任务】'
+      - name: '运行 【中青看点日常任务3】'
         if: env.YOUTH_REDBODY
         run: |
           node Task/youth.js
-      - name: '运行 【中青看点日常任务】'
+      - name: '运行 【中青看点日常任务4】'
         if: env.YOUTH_TIME
         run: |
           node Task/youth.js 
