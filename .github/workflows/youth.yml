@@ -33,29 +33,29 @@ jobs:
       - name: '运行 【中青看点日常任务1】'
          if: env.YOUTH_HEADER
          run: |
-           cd ~/ZIQQ
-          node Task/youth.js
+              cd ~/ZIQQ
+              node Task/youth.js
 		    if: env.YOUTH_ARTBODY
          run: |
-          cd ~/ZIQQ
+                  cd ~/ZIQQ
 		  npm install
       - name: '运行 【中青看点日常任务2】'
          if: env.YOUTH_ARTBODY
          run: |
-          cd ~/ZIQQ
+                 cd ~/ZIQQ
 		  node Task/youth.js  
 	  if: env.YOUTH_REDBODY
          run: |
-          cd ~/ZIQQ
+                  cd ~/ZIQQ
 		  npm install
       - name: '运行 【中青看点日常任务3】'
          if: env.YOUTH_REDBODY
          run: |
-          cd ~/ZIQQ
+                  cd ~/ZIQQ
 		  node Task/youth.js 
 		 if: env.YOUTH_TIME
         run: |
-          cd ~/ZIQQ
+                  cd ~/ZIQQ
 		  npm install
       - name: '运行 【中青看点日常任务4】'
          if: env.YOUTH_TIME
@@ -65,10 +65,6 @@ jobs:
 	
   
         env:
-          YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
-          YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
-          YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}
-          YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
