@@ -32,12 +32,7 @@ jobs:
               node Task/youth.js
       env:
         YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
-      - name: '运行 【中青看点日常任务2】'
-         if: env.YOUTH_TIME
-         run: |
-              node Task/youth.js
-      env:
-        YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
+
       env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
