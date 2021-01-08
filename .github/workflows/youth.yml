@@ -16,8 +16,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
-        YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
-        YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}
         YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
     steps:
       - uses: actions/checkout@v1
@@ -26,20 +24,20 @@ jobs:
         with:
           node-version: 12.x
    - name: npm install
-      if: env.YOUTH_HEADER
          run: |
           npm install
       - name: '运行 【中青看点日常任务1】'
          if: env.YOUTH_HEADER
          run: |
               node Task/youth.js
- if: env.YOUTH_TIME
-    run: |
-        npm install
-      - name: '运行 【中青看点日常任务4】'
+      env:
+        YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
+      - name: '运行 【中青看点日常任务2】'
          if: env.YOUTH_TIME
-      run: |
-         node Task/youth.js
+         run: |
+              node Task/youth.js
+      env:
+        YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
       env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
