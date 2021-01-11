@@ -1,13 +1,13 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 中青自动视频1
+name: 妞妞自动视频1
 
 on:
   workflow_dispatch:
     # 账号越多文章越多，运行一次消耗的时间也越长，文章和视频不要一块运行，cron自己看着写
   schedule:
-     - cron: '4 1,5,9,13 * * *'
+     - cron: '4 0,3,6,9,12 * * *'
   watch:
     types: started
 jobs:
