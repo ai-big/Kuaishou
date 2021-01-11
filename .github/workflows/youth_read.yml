@@ -6,7 +6,7 @@ name: 妞妞自动阅读1
 on:
   workflow_dispatch:
   schedule:
-     - cron: '1 1,4,8,12,14 * * *'
+     - cron: '1 1,4,7,10,13 * * *'
   watch:
     types: started
 jobs:
