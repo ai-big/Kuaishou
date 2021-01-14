@@ -27,6 +27,6 @@ jobs:
         run: |
           node Task/52pojie.js
         env:
-         PJ_TOKEN: ${{ secrets.KS_TOKEN }}
+         PJ_COOKIE: ${{ secrets.PJ_COOKIE }}
          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
          TG_USER_ID: ${{ secrets.TG_USER_ID }}
