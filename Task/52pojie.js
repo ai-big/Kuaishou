@@ -22,7 +22,7 @@ Node.js说明:
 浏览器打开 https://www.52pojie.cn/home.php 登录账号后, 开启抓包软件并刷新页面.
 抓取该URL请求头下的Cookie字段, 填入以下CookieWA的单引号内即可. */
 var $ = new Env('');
-const CookieWA = '';
+const CookieWA = 'htVD_2132_auth=dc9by9W5zAeXZA3YoUk6A5iCiBpox466hgRNrqeNfgL3hOQsWIHaD%2BntMz1WeQrBMqK6DBLqJswkrQvpDIgzn6zf2rA; htVD_2132_client_created=1608991869; htVD_2132_client_token=717BEFC4C9BEDDF4FB2F2AD488145EEC; htVD_2132_connect_is_bind=1;htVD_2132_connect_login=1; htVD_2132_connect_uin=717BEFC4C9BEDDF4FB2F2AD488145EEC; htVD_2132_lastact=1608991869%09connect.php%09login; htVD_2132_stats_qc_login=3; htVD_2132_ulastactivity=1608991869%7C0;htVD_2132_con_request_uri=https%3A%2F%2Fwww.52pojie.cn%2Fconnect.php%3Fmod%3Dlogin%26op%3Dcallback%26referer%3Dhttps%253A%252F%252Fwww.52pojie.cn%252F;htVD_2132_seccodecS=3296547.823c00716750ed5485; htVD_2132_seccodecSrRu=3296548.4af553b645e27bb6b3; Hm_lpvt_46d556462595ed05e05f009cdafff31a=1608991872; Hm_lvt_46d556462595ed05e05f009cdafff31a=1607441185,1607442872,1608991870; htVD_2132_smile=1D1; htVD_2132_visitedfid=65D13D16;htVD_2132_nofavfid=1;htVD_2132_lastcheckfeed=183616%7C1607443264;htVD_2132_lastvisit=1607438470;htVD_2132_saltkey=J98ubIV3';
 const notify = $.isNode() ? require('./sendNotify') : '';
 /***********************
 Surge 4.2.0+ 脚本配置:
