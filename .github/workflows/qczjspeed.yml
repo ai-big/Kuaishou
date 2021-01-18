@@ -36,12 +36,12 @@ jobs:
          QCZJ_addCoinBODY: ${{ secrets.QCZJ_addCoinBODY }}
          QCZJ_addCoin2BODY: ${{ secrets.QCZJ_addCoin2BODY }}
          QCZJ_CASH: ${{ secrets.QCZJ_CASH }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+         PUSH_KEY: ${{ secrets.PUSH_KEY }}
+         BARK_PUSH: ${{ secrets.BARK_PUSH }}
+         TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
+         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+         TG_USER_ID: ${{ secrets.TG_USER_ID }}
+         BARK_SOUND: ${{ secrets.BARK_SOUND }}
+         DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+         DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
 
