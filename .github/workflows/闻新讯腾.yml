@@ -2,7 +2,7 @@ name: 闻新讯腾
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 0-15 * * *'
+     - cron: '*/3 * * * *'
   watch:
     types: started
 jobs:
